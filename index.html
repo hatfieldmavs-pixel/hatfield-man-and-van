@@ -1,3 +1,379 @@
+import { MessageCircle } from "lucide-react";
+
+export default function HatfieldManAndVanRedesign() { const services = [ { title: "House Removals", text: "Reliable home moving support for flats, houses and family moves across Cambridgeshire and North London.", }, { title: "Office Moves", text: "Flexible office relocation help with careful handling, fast loading and efficient transport.", }, { title: "Man and Van", text: "Ideal for smaller moves, urgent jobs, student moves and single-item transport.", }, { title: "Furniture Collection", text: "Collection and delivery for sofas, beds, wardrobes, Facebook Marketplace buys and store purchases.", }, { title: "Waste Clearance", text: "Fast clearance help for unwanted items, bulky furniture and general house or office clear-outs.", }, { title: "Courier Deliveries", text: "Dependable transport for urgent deliveries, local runs and longer-distance courier jobs.", }, ];
+
+const areas = [ "Cambridge", "Huntingdon", "St Neots", "Peterborough", "Ely", "Royston", "Cambridgeshire", "Hertfordshire", "Stevenage", "Hatfield", "St Albans", "Barnet", "North London", ];
+
+const benefits = [ "20+ years of experience", "Fast quotes and friendly service", "Coverage from Cambridgeshire to North London", "Multiple vans available for flexible bookings", ];
+
+const trustBadges = [ "Fast Quotes", "Friendly Service", "Multiple Vans Available", "Same Day Availability", ];
+
+const testimonials = [ { name: "Google Review", text: "Punctual, professional and efficient. Everything was handled with care and the service was friendly throughout.", }, { name: "Customer Feedback", text: "Responded quickly, arrived on time and delivered exactly as promised. Honest, fair and reliable service.", }, { name: "Repeat Customer", text: "Great attitude and always willing to go above and beyond. Highly recommend for removals and collections.", }, ];
+
+const galleryItems = [ "Home removals and house moves", "Furniture collections and deliveries", "Waste clearance and bulky item removals", "Courier jobs and long-distance transport", ];
+
+const process = [ { step: "1", title: "Request a quote", text: "Send your move details, collection request or clearance job through the quote form.", }, { step: "2", title: "Get a fast response", text: "We review the details quickly and come back with availability and pricing.", }, { step: "3", title: "Book your job", text: "Once confirmed, we schedule the right van and driver for your area and job type.", }, ];
+
+const faqs = [ { q: "What areas do you cover?", a: "We cover Cambridgeshire, Cambridge, Huntingdon, St Neots, Peterborough, Ely, Royston, Hertfordshire, Stevenage, St Albans, Barnet and North London, along with surrounding areas.", }, { q: "What information do you need for a quote?", a: "Usually the pickup postcode, drop-off postcode, what items need moving or clearing, and your preferred date.", }, { q: "Can you help with same-day jobs?", a: "Yes, depending on availability. Fast quote requests help us respond quicker to urgent jobs.", }, { q: "Do you offer furniture collection and waste clearance?", a: "Yes. We help with furniture collection, bulky items, house clearances and other transport jobs.", }, ];
+
+const locationPages = [ "Man and Van Cambridge", "Man and Van Huntingdon", "Man and Van St Neots", "Man and Van Peterborough", "Man and Van Barnet", "Man and Van Stevenage", "Waste Clearance Cambridge", "Cambridge to London Moves", ];
+
+return (
+
+Hatfield Man & Van Services
+Removals, clearances and collections across Cambridgeshire and North London
+Services Areas Reviews FAQ
+Call Now Get a Fast Quote
+  <section className="mx-auto max-w-7xl px-4 py-14 md:py-20">
+    <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div>
+        <div className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-800">
+          Trusted moving help from Cambridgeshire to North London
+        </div>
+        <div className="mt-5 rounded-3xl border border-blue-100 bg-gradient-to-r from-blue-700 to-blue-800 p-6 text-white shadow-xl">
+          <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-200">Professional local removals</div>
+          <div className="mt-3 text-2xl font-bold md:text-3xl">Reliable moving support for homes, businesses and urgent collections</div>
+          <div className="mt-3 max-w-2xl text-sm leading-7 text-blue-100">
+            A strong hero image can be added here later using your real van or moving photos. For now, this banner gives the top of the site a more polished, professional look.
+          </div>
+        </div>
+        <h1 className="mt-6 text-4xl font-bold tracking-tight md:text-6xl">
+          Man and Van, Removals and Waste Clearance Made Simple
+        </h1>
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-700">
+          Need help with a home move, office move, furniture collection, courier delivery or waste clearance? We provide quick quotes, dependable drivers and friendly service for customers across Cambridgeshire, Hertfordshire and North London.
+        </p>
+        <p className="mt-4 max-w-2xl text-base leading-7 text-slate-700">
+          Send your details through the form or WhatsApp us photos for a quicker quote.
+        </p>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          {benefits.map((benefit) => (
+            <div key={benefit} className="rounded-2xl border border-blue-100 p-4 text-sm font-medium shadow-sm">
+              {benefit}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a href="#quote" className="rounded-2xl bg-blue-700 px-6 py-4 text-sm font-semibold text-white shadow hover:opacity-90">
+            Request a Quote
+          </a>
+          <a href="#services" className="rounded-2xl border border-blue-200 px-6 py-4 text-sm font-semibold hover:bg-blue-50">
+            View Services
+          </a>
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-700">
+          <span className="rounded-full bg-blue-50 px-4 py-2">House Removals</span>
+          <span className="rounded-full bg-blue-50 px-4 py-2">Furniture Collection</span>
+          <span className="rounded-full bg-blue-50 px-4 py-2">Waste Clearance</span>
+          <span className="rounded-full bg-blue-50 px-4 py-2">Courier Services</span>
+          <span className="rounded-full bg-blue-50 px-4 py-2">Same Day Quotes</span>
+        </div>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {trustBadges.map((badge) => (
+            <div key={badge} className="rounded-2xl border border-orange-200 bg-orange-50 px-4 py-3 text-center text-sm font-semibold text-slate-700">
+              {badge}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div id="quote" className="rounded-3xl border border-blue-100 bg-blue-50 p-6 shadow-xl md:p-8">
+        <div className="text-2xl font-bold">Get a fast quote</div>
+        <p className="mt-2 text-sm text-slate-700">
+          Fill in the details below and we can come back to you quickly with availability and pricing.
+        </p>
+
+        <form className="mt-6 grid gap-4">
+          <div className="rounded-2xl border border-orange-200 bg-white px-4 py-3 text-sm text-slate-700">
+            For the quickest quote, send photos on WhatsApp after submitting your details.
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <input className="rounded-2xl border border-blue-200 bg-white px-4 py-3 outline-none focus:border-blue-700" placeholder="Your name" />
+            <input className="rounded-2xl border border-blue-200 bg-white px-4 py-3 outline-none focus:border-blue-700" placeholder="Phone number" />
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <input className="rounded-2xl border border-blue-200 bg-white px-4 py-3 outline-none focus:border-blue-700" placeholder="Pickup postcode" />
+            <input className="rounded-2xl border border-blue-200 bg-white px-4 py-3 outline-none focus:border-blue-700" placeholder="Drop-off postcode" />
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <select className="rounded-2xl border border-blue-200 bg-white px-4 py-3 outline-none focus:border-blue-700">
+              <option>Select a service</option>
+              {services.map((service) => (
+                <option key={service.title}>{service.title}</option>
+              ))}
+            </select>
+            <input type="date" className="rounded-2xl border border-blue-200 bg-white px-4 py-3 outline-none focus:border-blue-700" />
+          </div>
+          <textarea className="min-h-[140px] rounded-2xl border border-blue-200 bg-white px-4 py-3 outline-none focus:border-blue-700" placeholder="Tell us what you need moving, collecting or clearing" />
+          <div className="grid gap-3 sm:grid-cols-2">
+            <button type="button" className="rounded-2xl bg-blue-700 px-6 py-4 text-sm font-semibold text-white shadow hover:opacity-90">
+              Send Quote Request
+            </button>
+            <a href="https://wa.me/447933830894" className="rounded-2xl border border-blue-200 bg-white px-6 py-4 text-center text-sm font-semibold hover:bg-orange-50">
+              WhatsApp Us
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" className="mx-auto max-w-7xl px-4 py-14">
+    <div className="max-w-3xl">
+      <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">About Us</div>
+      <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">A trusted removals company with over 20 years of experience</h2>
+      <p className="mt-6 text-slate-700 leading-8">
+        Welcome to Hatfield Man & Van Services, an established, professional and friendly removals company covering the whole of the UK. With over 20 years of experience in residential and commercial removals, we offer all the services you would expect, delivered with a reliable and customer‑focused approach.
+      </p>
+      <p className="mt-4 text-slate-700 leading-8">
+        Are you on the move or require a van hire service? We specialise in home and office removals as well as courier solutions, ensuring your items arrive safely and on time regardless of size, timeframe or location. We believe in high quality customer service and pride ourselves on our reliability all year round.
+      </p>
+    </div>
+  </section>
+
+  <section className="border-y border-blue-100 bg-blue-50">
+    <div className="mx-auto max-w-7xl px-4 py-14">
+      <div className="grid gap-4 md:grid-cols-3">
+        {process.map((item) => (
+          <div key={item.step} className="rounded-3xl border border-blue-100 bg-white p-6 shadow-sm">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white">
+              {item.step}
+            </div>
+            <div className="mt-4 text-xl font-semibold">{item.title}</div>
+            <p className="mt-3 text-sm leading-7 text-slate-700">{item.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="services" className="mx-auto max-w-7xl px-4 py-14">
+    <div className="max-w-2xl">
+      <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">Services</div>
+      <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Everything you need from a trusted local moving team</h2>
+    </div>
+    <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      {services.map((service) => (
+        <div key={service.title} className="rounded-3xl border border-blue-100 bg-white p-6 shadow-sm">
+          <div className="text-xl font-semibold">{service.title}</div>
+          <p className="mt-3 text-sm leading-7 text-slate-700">{service.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="areas" className="border-y border-blue-100 bg-blue-50">
+    <div className="mx-auto max-w-7xl px-4 py-14">
+      <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="rounded-3xl bg-blue-700 p-8 text-white shadow-xl">
+          <div className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-100">Areas Covered</div>
+          <h3 className="mt-3 text-3xl font-bold tracking-tight">Covering Cambridgeshire through to North London</h3>
+          <p className="mt-4 max-w-2xl leading-8 text-blue-100">
+            We regularly cover home removals, office moves, collections and clearances across key towns and surrounding areas.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            {areas.map((area) => (
+              <span key={area} className="rounded-full bg-orange-500/20 px-4 py-2 text-sm font-medium">
+                {area}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm">
+          <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">Popular service pages</div>
+          <div className="mt-5 space-y-3">
+            {locationPages.map((page) => (
+              <div key={page} className="rounded-2xl bg-blue-50 p-4 text-sm font-medium text-blue-800">
+                {page}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section className="mx-auto max-w-7xl px-4 py-14">
+    <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="rounded-3xl bg-gradient-to-br from-blue-700 to-blue-800 p-8 text-white shadow-xl">
+        <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-200">Featured landing page</div>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Cambridge to London moves</h2>
+        <p className="mt-4 max-w-2xl leading-8 text-blue-100">
+          This route is ideal for student moves, renters, smaller flat moves, office items and furniture transport. It gives you a strong dedicated page for one of your most valuable service corridors.
+        </p>
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          <div className="rounded-2xl bg-white/10 p-4">Ideal for student moves</div>
+          <div className="rounded-2xl bg-white/10 p-4">Perfect for renters and flat moves</div>
+          <div className="rounded-2xl bg-white/10 p-4">Great for furniture transport</div>
+          <div className="rounded-2xl bg-white/10 p-4">Targets a high-demand route</div>
+        </div>
+      </div>
+
+      <div className="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm">
+        <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">Suggested page structure</div>
+        <div className="mt-3 rounded-2xl bg-orange-50 px-4 py-3 text-sm text-slate-700">
+          This page is a strong lead generator for student moves, renters and furniture transport between two high-demand areas.
+        </div>
+        <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
+          <p><strong>Headline:</strong> Cambridge to London Man and Van Services</p>
+          <p><strong>Intro:</strong> Reliable removals, furniture collections and small moves between Cambridge and London with fast quotes and flexible availability.</p>
+          <p><strong>Best for:</strong> students, renters, flat moves, office items and last-minute transport jobs.</p>
+          <p><strong>Call to action:</strong> Request a quote with pickup postcode, drop-off postcode and move date.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section className="border-y border-blue-100 bg-blue-50">
+    <div className="mx-auto max-w-7xl px-4 py-14">
+      <div className="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm">
+        <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">Trust Signals</div>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Built to give customers confidence before they call</h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-4">
+          <div className="rounded-2xl bg-blue-50 p-5 text-center">
+            <div className="text-3xl font-bold text-blue-700">20+</div>
+            <div className="mt-2 text-sm font-medium text-slate-700">Years of experience</div>
+          </div>
+          <div className="rounded-2xl bg-blue-50 p-5 text-center">
+            <div className="text-3xl font-bold text-blue-700">3+</div>
+            <div className="mt-2 text-sm font-medium text-slate-700">Vans available</div>
+          </div>
+          <div className="rounded-2xl bg-blue-50 p-5 text-center">
+            <div className="text-3xl font-bold text-blue-700">Fast</div>
+            <div className="mt-2 text-sm font-medium text-slate-700">Quotes and response</div>
+          </div>
+          <div className="rounded-2xl bg-blue-50 p-5 text-center">
+            <div className="text-3xl font-bold text-blue-700">Local</div>
+            <div className="mt-2 text-sm font-medium text-slate-700">Coverage and knowledge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section className="mx-auto max-w-7xl px-4 py-14">
+    <div className="max-w-2xl">
+      <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">Recent Jobs</div>
+      <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">The type of work we regularly help customers with</h2>
+      <p className="mt-4 text-sm leading-7 text-slate-700">This section can later be upgraded with real job photos from your Facebook, Instagram and Google profile.</p>
+    </div>
+    <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      {galleryItems.map((item) => (
+        <div key={item} className="rounded-3xl border border-blue-100 bg-white p-6 shadow-sm">
+          <div className="h-40 rounded-2xl bg-gradient-to-br from-blue-100 to-orange-50"></div>
+          <div className="mt-4 text-base font-semibold text-blue-900">{item}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="reviews" className="mx-auto max-w-7xl px-4 py-14">
+    <div className="max-w-2xl">
+      <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">Reviews</div>
+      <div className="mt-3 flex items-center gap-2 text-orange-500">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <span className="text-sm text-slate-700">Google review section ready and linked to your business presence</span>
+      </div>
+      <p className="mt-3 text-sm leading-7 text-slate-700">These review highlights are based on customer feedback style and can be replaced with your full real Google reviews once you regain direct access.</p>
+      <div className="mt-4 flex flex-wrap gap-3">
+        <a href="https://maps.app.goo.gl/sixtn4jp9fJBQagK8" target="_blank" className="rounded-2xl border border-blue-200 px-5 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50">View Google Business Profile</a>
+      </div>
+      <h2 className="mt-6 text-3xl font-bold tracking-tight md:text-4xl">Built on reliable service and repeat customers</h2>
+    </div>
+    <div className="mt-8 grid gap-4 md:grid-cols-3">
+      {testimonials.map((testimonial) => (
+        <div key={testimonial.name} className="rounded-3xl border border-blue-100 bg-white p-6 shadow-sm">
+          <div className="text-lg font-semibold">{testimonial.name}</div>
+          <p className="mt-3 text-sm leading-7 text-slate-700">“{testimonial.text}”</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section id="faq" className="border-y border-blue-100 bg-blue-50">
+    <div className="mx-auto max-w-7xl px-4 py-14">
+      <div className="max-w-2xl">
+        <div className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">FAQ</div>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Questions customers often ask</h2>
+      </div>
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
+        {faqs.map((faq) => (
+          <div key={faq.q} className="rounded-3xl border border-blue-100 bg-white p-6 shadow-sm">
+            <div className="text-lg font-semibold">{faq.q}</div>
+            <p className="mt-3 text-sm leading-7 text-slate-700">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section className="mx-auto max-w-7xl px-4 py-14">
+    <div className="rounded-3xl bg-blue-700 px-6 py-10 text-center text-white shadow-xl md:px-10">
+      <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Need a quick quote?</h2>
+      <p className="mx-auto mt-4 max-w-2xl leading-8 text-blue-100">
+        Whether you need a house move, office move, furniture collection, courier service or waste clearance, we are ready to help.
+      </p>
+      <div className="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="tel:07933830894" className="rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-blue-700 hover:bg-orange-50">
+          Call Now
+        </a>
+        <a href="#quote" className="rounded-2xl border border-orange-300/40 px-6 py-4 text-sm font-semibold hover:bg-orange-500/20">
+          Request a Quote
+        </a>
+        <a href="https://wa.me/447933830894" className="rounded-2xl border border-orange-300/40 px-6 py-4 text-sm font-semibold hover:bg-orange-500/20">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer className="border-t border-blue-100 bg-white">
+    <div className="mx-auto max-w-7xl px-4 py-10">
+      <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <div className="font-semibold text-lg">Hatfield Man & Van Services</div>
+          <div className="text-sm text-slate-700">Serving Cambridgeshire, Hertfordshire and North London</div>
+        </div>
+
+        <div className="flex items-center gap-5 flex-wrap">
+          <span className="text-sm font-medium text-slate-700">Follow us:</span>
+
+          <a href="https://www.facebook.com/share/1HxxYdgMku/" target="_blank" className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-600 text-white text-xs font-bold hover:opacity-90">
+            f
+          </a>
+
+          <a href="https://www.instagram.com/hatfieldmanand" target="_blank" className="flex h-9 w-9 items-center justify-center rounded-full bg-pink-500 text-white text-xs font-bold hover:opacity-90">
+            ig
+          </a>
+
+          <a href="https://www.tiktok.com/@hmavs26?_r=1&_t=ZN-94kRoTamZYl" target="_blank" className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white text-xs font-bold hover:opacity-90" aria-label="TikTok">
+            tt
+          </a>
+        </div>
+
+        <div className="text-sm text-orange-600">© 2026 Hatfield Man & Van Services</div>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    href="https://wa.me/447933830894"
+    aria-label="Chat on WhatsApp"
+    className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-2xl transition hover:scale-[1.02] hover:bg-green-600"
+  >
+    <MessageCircle className="h-5 w-5" />
+    <span>WhatsApp Us</span>
+  </a>
+</div>
+); }
+
+
+Yahoo Mail: Search, organise, conquer
 
      
 
