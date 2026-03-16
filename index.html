@@ -1,1 +1,936 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hatfield Man & Van Services</title>
+  <meta
+    name="description"
+    content="Hatfield Man & Van Services - removals, clearances and collections across Cambridgeshire, Hertfordshire and North London."
+  />
+  <style>
+    :root {
+      --blue: #1d4ed8;
+      --blue-dark: #1e40af;
+      --blue-soft: #eff6ff;
+      --blue-border: #dbeafe;
+      --orange: #ea580c;
+      --orange-soft: #fff7ed;
+      --green: #22c55e;
+      --green-dark: #16a34a;
+      --text: #172554;
+      --muted: #334155;
+      --white: #ffffff;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--blue-border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      background: var(--blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 22px;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 0;
+      color: var(--blue-dark);
+    }
+
+    .brand-sub {
+      margin-top: 4px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav a:hover { color: var(--blue); }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      padding: 14px 22px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .btn-primary:hover { opacity: 0.92; }
+
+    .btn-outline {
+      border-color: var(--blue-border);
+      background: #fff;
+      color: var(--text);
+    }
+
+    .btn-outline:hover { background: var(--blue-soft); }
+
+    .hero {
+      padding: 56px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 1.02;
+      margin: 24px 0 18px;
+      color: var(--blue-dark);
+    }
+
+    .lead {
+      font-size: 20px;
+      color: var(--muted);
+      margin: 0 0 12px;
+      max-width: 720px;
+    }
+
+    .sublead {
+      font-size: 16px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .benefit {
+      border: 1px solid var(--blue-border);
+      border-radius: 18px;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 26px 0;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      background: var(--blue-soft);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .quote-box {
+      border: 1px solid var(--blue-border);
+      background: var(--blue-soft);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .quote-box h2 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      color: var(--blue-dark);
+    }
+
+    .quote-box p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .note {
+      border: 1px solid #fed7aa;
+      background: #fff;
+      color: var(--muted);
+      border-radius: 18px;
+      padding: 14px 16px;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .cols-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #bfdbfe;
+      background: #fff;
+      border-radius: 18px;
+      padding: 14px 16px;
+      font-size: 15px;
+      color: #0f172a;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--blue);
+    }
+
+    .section {
+      padding: 54px 0;
+    }
+
+    .section-soft {
+      background: var(--blue-soft);
+      border-top: 1px solid var(--blue-border);
+      border-bottom: 1px solid var(--blue-border);
+    }
+
+    .section-title-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: 42px;
+      line-height: 1.1;
+      color: var(--blue-dark);
+    }
+
+    .about p,
+    .text-block {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .process-grid,
+    .services-grid,
+    .reviews-grid,
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .process-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .reviews-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--blue-border);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .step {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .card h3, .card h4 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: var(--text);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+    }
+
+    .blue-panel {
+      background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+      color: #fff;
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .blue-panel h3 {
+      margin: 10px 0 14px;
+      font-size: 38px;
+      line-height: 1.1;
+    }
+
+    .blue-panel p {
+      margin: 0;
+      color: #dbeafe;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(249, 115, 22, 0.18);
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .mini-list .mini-item {
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      border-radius: 18px;
+      padding: 14px 16px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+    }
+
+    .feature-note {
+      margin-top: 12px;
+      background: var(--orange-soft);
+      border-radius: 18px;
+      padding: 14px 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta-box {
+      background: var(--blue);
+      color: #fff;
+      border-radius: 28px;
+      padding: 34px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      color: #dbeafe;
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn-light {
+      background: #fff;
+      color: var(--blue);
+    }
+
+    .btn-light:hover { background: #fff7ed; }
+
+    .btn-ghost {
+      border: 1px solid rgba(253, 186, 116, 0.5);
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(249,115,22,0.16);
+    }
+
+    footer {
+      border-top: 1px solid var(--blue-border);
+      background: #fff;
+      padding: 34px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .footer-sub {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-social a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .footer-copy {
+      color: var(--orange);
+      font-size: 14px;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1001;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green);
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 999px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .floating-whatsapp:hover { background: var(--green-dark); }
+
+    .wa-icon {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 2px solid #fff;
+      border-radius: 999px;
+      position: relative;
+    }
+
+    .wa-icon:after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 2px;
+      width: 7px;
+      height: 7px;
+      background: var(--green);
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(-35deg);
+    }
+
+    @media (max-width: 1050px) {
+      h1 { font-size: 50px; }
+      .hero-grid,
+      .areas-grid,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      .services-grid,
+      .process-grid,
+      .reviews-grid,
+      .faq-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .brand-title { font-size: 24px; }
+      h1 { font-size: 38px; }
+      .benefits,
+      .cols-2,
+      .services-grid,
+      .process-grid,
+      .reviews-grid,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav { display: none; }
+      .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+        padding: 12px 16px;
+      }
+      .section h2 { font-size: 34px; }
+      .blue-panel h3 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-badge">HM</div>
+        <div>
+          <div class="brand-title">Hatfield Man &amp; Van Services</div>
+          <div class="brand-sub">Removals, clearances and collections across Cambridgeshire and North London</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#areas">Areas</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:07933830894" class="btn btn-primary">Call Now</a>
+        <a href="#quote" class="btn btn-outline">Get a Fast Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Trusted moving help from Cambridgeshire to North London</div>
+          <h1>Man and Van, Removals and Waste Clearance Made Simple</h1>
+          <p class="lead">
+            Need help with a home move, office move, furniture collection, courier delivery or waste clearance? We provide quick quotes, dependable drivers and friendly service for customers across Cambridgeshire, Hertfordshire and North London.
+          </p>
+          <p class="sublead">Send your details through the form or WhatsApp us photos for a quicker quote.</p>
+
+          <div class="benefits">
+            <div class="benefit">20+ years of experience</div>
+            <div class="benefit">Fast quotes and friendly service</div>
+            <div class="benefit">Coverage from Cambridgeshire to North London</div>
+            <div class="benefit">Multiple vans available for flexible bookings</div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#quote" class="btn btn-primary">Request a Quote</a>
+            <a href="#services" class="btn btn-outline">View Services</a>
+          </div>
+
+          <div class="tag-list">
+            <span class="tag">House Removals</span>
+            <span class="tag">Furniture Collection</span>
+            <span class="tag">Waste Clearance</span>
+            <span class="tag">Courier Services</span>
+            <span class="tag">Same Day Quotes</span>
+          </div>
+        </div>
+
+        <div id="quote" class="quote-box">
+          <h2>Get a fast quote</h2>
+          <p>Fill in the details below and we can come back to you quickly with availability and pricing.</p>
+
+          <div class="note">
+            For the quickest quote, send photos on WhatsApp after submitting your details.
+          </div>
+
+          <form class="form-grid" action="mailto:hatfieldmavs@gmail.com" method="post" enctype="text/plain">
+            <div class="cols-2">
+              <input type="text" name="name" placeholder="Your name" />
+              <input type="tel" name="phone" placeholder="Phone number" />
+            </div>
+
+            <div class="cols-2">
+              <input type="text" name="pickup_postcode" placeholder="Pickup postcode" />
+              <input type="text" name="dropoff_postcode" placeholder="Drop-off postcode" />
+            </div>
+
+            <div class="cols-2">
+              <select name="service">
+                <option>Select a service</option>
+                <option>House Removals</option>
+                <option>Office Moves</option>
+                <option>Man and Van</option>
+                <option>Furniture Collection</option>
+                <option>Waste Clearance</option>
+                <option>Courier Deliveries</option>
+              </select>
+              <input type="date" name="move_date" />
+            </div>
+
+            <textarea name="details" placeholder="Tell us what you need moving, collecting or clearing"></textarea>
+
+            <div class="cols-2">
+              <button type="submit" class="btn btn-primary" style="width:100%;">Send Quote Request</button>
+              <a href="https://wa.me/447933830894" class="btn btn-outline" style="width:100%; justify-content:center;">WhatsApp Us</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-title-kicker">About Us</div>
+        <h2>A trusted removals company with over 20 years of experience</h2>
+        <p>
+          Welcome to Hatfield Man &amp; Van Services, an established, professional and friendly removals company covering the whole of the UK. With over 20 years of experience in residential and commercial removals, we offer all the services you would expect, delivered with a reliable and customer-focused approach.
+        </p>
+        <p>
+          Are you on the move or require a van hire service? We specialise in home and office removals as well as courier solutions, ensuring your items arrive safely and on time regardless of size, timeframe or location. We believe in high quality customer service and pride ourselves on our reliability all year round.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="process-grid">
+          <div class="card">
+            <div class="step">1</div>
+            <h3>Request a quote</h3>
+            <p>Send your move details, collection request or clearance job through the quote form.</p>
+          </div>
+          <div class="card">
+            <div class="step">2</div>
+            <h3>Get a fast response</h3>
+            <p>We review the details quickly and come back with availability and pricing.</p>
+          </div>
+          <div class="card">
+            <div class="step">3</div>
+            <h3>Book your job</h3>
+            <p>Once confirmed, we schedule the right van and driver for your area and job type.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-title-kicker">Services</div>
+        <h2>Everything you need from a trusted local moving team</h2>
+
+        <div class="services-grid">
+          <div class="card">
+            <h3>House Removals</h3>
+            <p>Reliable home moving support for flats, houses and family moves across Cambridgeshire and North London.</p>
+          </div>
+          <div class="card">
+            <h3>Office Moves</h3>
+            <p>Flexible office relocation help with careful handling, fast loading and efficient transport.</p>
+          </div>
+          <div class="card">
+            <h3>Man and Van</h3>
+            <p>Ideal for smaller moves, urgent jobs, student moves and single-item transport.</p>
+          </div>
+          <div class="card">
+            <h3>Furniture Collection</h3>
+            <p>Collection and delivery for sofas, beds, wardrobes, Facebook Marketplace buys and store purchases.</p>
+          </div>
+          <div class="card">
+            <h3>Waste Clearance</h3>
+            <p>Fast clearance help for unwanted items, bulky furniture and general house or office clear-outs.</p>
+          </div>
+          <div class="card">
+            <h3>Courier Deliveries</h3>
+            <p>Dependable transport for urgent deliveries, local runs and longer-distance courier jobs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" class="section section-soft">
+      <div class="container areas-grid">
+        <div class="blue-panel">
+          <div class="section-title-kicker" style="color:#dbeafe;">Areas Covered</div>
+          <h3>Covering Cambridgeshire through to North London</h3>
+          <p>
+            We regularly cover home removals, office moves, collections and clearances across key towns and surrounding areas.
+          </p>
+          <div class="pill-wrap">
+            <span class="pill">Cambridge</span>
+            <span class="pill">Huntingdon</span>
+            <span class="pill">St Neots</span>
+            <span class="pill">Peterborough</span>
+            <span class="pill">Ely</span>
+            <span class="pill">Royston</span>
+            <span class="pill">Cambridgeshire</span>
+            <span class="pill">Hertfordshire</span>
+            <span class="pill">Stevenage</span>
+            <span class="pill">Hatfield</span>
+            <span class="pill">St Albans</span>
+            <span class="pill">Barnet</span>
+            <span class="pill">North London</span>
+          </div>
+        </div>
+
+        <div class="card mini-list">
+          <div class="section-title-kicker">Popular service pages</div>
+          <div class="mini-item">Man and Van Cambridge</div>
+          <div class="mini-item">Man and Van Huntingdon</div>
+          <div class="mini-item">Man and Van St Neots</div>
+          <div class="mini-item">Man and Van Peterborough</div>
+          <div class="mini-item">Man and Van Barnet</div>
+          <div class="mini-item">Man and Van Stevenage</div>
+          <div class="mini-item">Waste Clearance Cambridge</div>
+          <div class="mini-item">Cambridge to London Moves</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container feature-grid">
+        <div class="blue-panel">
+          <div class="section-title-kicker" style="color:#fed7aa;">Featured landing page</div>
+          <h3>Cambridge to London moves</h3>
+          <p>
+            This route is ideal for student moves, renters, smaller flat moves, office items and furniture transport. It gives you a strong dedicated page for one of your most valuable service corridors.
+          </p>
+          <div class="pill-wrap">
+            <span class="pill">Ideal for student moves</span>
+            <span class="pill">Perfect for renters and flat moves</span>
+            <span class="pill">Great for furniture transport</span>
+            <span class="pill">Targets a high-demand route</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-title-kicker">Suggested page structure</div>
+          <div class="feature-note">
+            This page is a strong lead generator for student moves, renters and furniture transport between two high-demand areas.
+          </div>
+          <div class="text-block" style="margin-top:18px;">
+            <p><strong>Headline:</strong> Cambridge to London Man and Van Services</p>
+            <p><strong>Intro:</strong> Reliable removals, furniture collections and small moves between Cambridge and London with fast quotes and flexible availability.</p>
+            <p><strong>Best for:</strong> students, renters, flat moves, office items and last-minute transport jobs.</p>
+            <p><strong>Call to action:</strong> Request a quote with pickup postcode, drop-off postcode and move date.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="container">
+        <div class="section-title-kicker">Reviews</div>
+        <p class="text-block" style="margin-top:0; font-size:14px;">
+          We can replace these placeholder reviews with your real Google customer reviews once you regain access.
+        </p>
+        <h2>Built on reliable service and repeat customers</h2>
+
+        <div class="reviews-grid">
+          <div class="card">
+            <h3>Recent Customer</h3>
+            <p>“Brilliant service from start to finish. Friendly, on time, and took the stress out of moving day.”</p>
+          </div>
+          <div class="card">
+            <h3>Local Client</h3>
+            <p>“Used them for furniture collection and waste clearance. Quick response and very professional.”</p>
+          </div>
+          <div class="card">
+            <h3>Repeat Customer</h3>
+            <p>“Reliable every time. Great communication and fair pricing. Highly recommend.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section-soft">
+      <div class="container">
+        <div class="section-title-kicker">FAQ</div>
+        <h2>Questions customers often ask</h2>
+
+        <div class="faq-grid">
+          <div class="card">
+            <h3>What areas do you cover?</h3>
+            <p>We cover Cambridgeshire, Cambridge, Huntingdon, St Neots, Peterborough, Ely, Royston, Hertfordshire, Stevenage, St Albans, Barnet and North London, along with surrounding areas.</p>
+          </div>
+          <div class="card">
+            <h3>What information do you need for a quote?</h3>
+            <p>Usually the pickup postcode, drop-off postcode, what items need moving or clearing, and your preferred date.</p>
+          </div>
+          <div class="card">
+            <h3>Can you help with same-day jobs?</h3>
+            <p>Yes, depending on availability. Fast quote requests help us respond quicker to urgent jobs.</p>
+          </div>
+          <div class="card">
+            <h3>Do you offer furniture collection and waste clearance?</h3>
+            <p>Yes. We help with furniture collection, bulky items, house clearances and other transport jobs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Need a quick quote?</h2>
+          <p>
+            Whether you need a house move, office move, furniture collection, courier service or waste clearance, we are ready to help.
+          </p>
+          <div class="cta-actions">
+            <a href="tel:07933830894" class="btn btn-light">Call Now</a>
+            <a href="#quote" class="btn btn-ghost">Request a Quote</a>
+            <a href="https://wa.me/447933830894" class="btn btn-ghost">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">Hatfield Man &amp; Van Services</div>
+        <div class="footer-sub">Serving Cambridgeshire and North London</div>
+      </div>
+
+      <div class="footer-social">
+        <span>Follow us:</span>
+        <a href="https://www.facebook.com/share/1HxxYdgMku/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/hatfieldmanand" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+      </div>
+
+      <div class="footer-copy">© 2026 Hatfield Man &amp; Van Services. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/447933830894" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <span class="wa-icon"></span>
+    <span>WhatsApp Us</span>
+  </a>
+
+</body>
+</html>
